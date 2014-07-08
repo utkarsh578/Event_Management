@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration {
 		$table->string('user_email',50);
 		$table->string('user_fb_id',50)->nullable();
 		$table->string('user_username',50);
-		$table->string('user_password',70);		
+		$table->string('password',70);		
 		$table->string('user_remember_token',70)->nullable();
 		$table->string('user_access_token',70)->nullable();
 		$table->string('user_mobile_no',15);
