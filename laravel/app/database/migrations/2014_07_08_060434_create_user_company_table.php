@@ -27,7 +27,7 @@ class CreateUserCompanyTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('User_Company');
+		Schema::drop('user_company');
 	}
 
 }

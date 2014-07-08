@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration {
 		$table->string('user_mobile_no',15);
 		$table->string('user_address',255)->nullable();
 		$table->string('user_profile_pic',255);
+		$table->longText('user_description');
 		$table->Timestamps();
  		});
 	}

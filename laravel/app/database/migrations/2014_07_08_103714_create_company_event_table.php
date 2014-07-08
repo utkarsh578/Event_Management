@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserEventAttendingTable extends Migration {
+class CreateCompanyEventTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,9 @@ class CreateUserEventAttendingTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('user_event_attending',function($table)
+		Schema::create('company_event',function($table)
 		{
-			$table->bigInteger('user_id')->foreign('user_id')->references('user_id')->on('users');
+			$table->bigInteger('company_id')->foreign('company_id')->references('company_id')->on('company');
 			$table->bigInteger('event_id')->foreign('event_id')->references('event_id')->on('events'); 
 		});
 	}
@@ -26,7 +26,7 @@ class CreateUserEventAttendingTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('user_event_attending');
+		Schema::drop('company_event');
 	}
 
 }
