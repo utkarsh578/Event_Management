@@ -15,3 +15,22 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+
+Route::get('/login',function(){
+ 	 if(Auth::check()){
+ 	 	return Redirect::to("addevent");
+ 	 }
+ 	 // return Hash::make('123');
+ 	 return View::make("login");
+ });
+Route::get('/loginfb','UsersController@login_fb');
+Route::get('/loginfb/callback','UsersController@login_fb_callback');
+
+Route::group(array('before' => "auth"), function() {
+Route::get('event/create', function()
+{
+	return View::make('createentry');
+});
+Route::post('/event/create/add','EventController@add_details');
+});
