@@ -12,7 +12,7 @@ class CreateUserEventAttendingTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('User_Event_Attending',function($table)
+		Schema::create('user_event_attending',function($table)
 		{
 			$table->bigInteger('user_id')->foreign('user_id')->references('user_id')->on('users');
 			$table->bigInteger('event_id')->foreign('event_id')->references('event_id')->on('events'); 

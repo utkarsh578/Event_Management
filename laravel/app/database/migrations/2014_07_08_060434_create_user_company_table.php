@@ -12,7 +12,7 @@ class CreateUserCompanyTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('User_Company',function($table)
+		Schema::create('user_company',function($table)
 		{
 			$table->bigInteger('user_id')->foreign('user_id')->references('user_id')->on('users');
 			$table->bigInteger('company_id')->foreign('company_id')->references('company_id')->on('company'); 

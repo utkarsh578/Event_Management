@@ -12,7 +12,7 @@ class CreateUserEventCreateTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('User_Event_Create',function($table)
+		Schema::create('user_event_create',function($table)
 		{
 			$table->bigInteger('user_id')->foreign('user_id')->references('user_id')->on('users');
 			$table->bigInteger('event_id')->foreign('event_id')->references('event_id')->on('events'); 
